@@ -1,0 +1,446 @@
+@font-face{
+    font-family: 'Nanum';
+    src: url('../font/Nanum_Pen_Script/NanumPenScript-Regular.ttf');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+figure{
+    width: fit-content;
+    height: fit-content;
+}
+
+header{
+    width: 100px;
+    height: 400px;
+    position: absolute;
+    top: 280px;
+    left: 20px;
+    color: #777777;
+}
+
+header ul li a{
+    display: block;
+    text-align: center;
+}
+
+header ul li a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+header ul li a figure{
+    margin: 5px auto;
+}
+
+main{
+    height: 960px;
+    padding-top: 100px;
+    margin-bottom: 300px;
+}
+
+main .mainbox{
+    height: 760px;
+    padding: 0;
+    background-image: url('../image/mainbg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .mainbox .biglogo{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    left: 25%;
+    transform: translateX(-50%);
+    /*calc이용해서 바꾸자*/
+    /*그냥 로고 자체를 새로 만들자*/
+    box-shadow: #888888 4px 4px 4px;
+}
+
+main .mainbox .titlebox{
+    position: relative;
+    right: 25%;
+    transform: translateX(50%);
+    text-align: center;
+}
+
+main .mainbox .titlebox h1{
+    font-size: 8rem;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+main .mainbox .titlebox h2{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+main .mainbox .titlebox .btnbox{
+    width: 430px;
+    height: 100px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+main .mainbox .titlebox .btnbox button{
+    width: 200px;
+    height: 100px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+main .mainbox .titlebox .btnbox button:first-of-type{
+    background-color: #ff7f00;
+    color: #ffffff;
+}
+
+main .mainbox .titlebox .btnbox button:nth-of-type(2){
+    background-color: #777777;
+    color: #d9d9d9;
+}
+
+main .mainbox .deco{
+    position: absolute;
+    top: 100px;
+    right: -51px;
+}
+
+#section1{
+    height: 760px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+#section1 .bgbox{
+    width: calc(calc(1140px + 97px) + calc(50% - 570px));
+    height: 100%;
+    background: linear-gradient(to right, #ff7f00, rgba(255,127,0,0.1));
+    position: absolute;
+}
+
+#section1 .container{
+    padding: 0;
+    padding-top: 10px;
+}
+
+#section1 .subtitle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#section1 .subtitle h2{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 4rem;
+    margin-right: 20px;
+}
+
+#section1 .subtitle h3{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 200%;
+}
+
+#section1>p{
+    font-size: 1rem;
+}
+
+#section1 p span{
+    font-weight: 700;
+}
+
+#section1 .videobox{
+    height: 500px;
+    background-color: #777777;
+}
+
+#section1 .subPageLink{
+    width: 300px;
+    height: 100px;
+    background-color: #dfdfff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+    font-family: 'Nanum';
+    font-size: 1.5rem;
+}
+
+#section1 .subPageLink .textbox{
+    text-align: center;/*textbox는 없어도 됨*/
+}
+
+#section1 .subPageLink .textbox p{
+    margin-top: 14px;
+}
+
+#section2{
+    width: 100%;
+    height: 860px;
+    margin-bottom: 100px;
+    padding-top: 10px;
+    background: linear-gradient(to right, rgba(208, 112, 251, 0.5), rgba(255, 192, 203, 0.5));
+}
+
+#section2 .subtitle{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #ffffff;
+}
+
+#section2 .subtitle h2{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+#section2 .subtitle h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 200%;
+}
+
+#section2 .slide{
+    height: 560px;
+    position: relative;
+}
+
+#section2 .slide .slide1, #section2 .slide .slide2,
+#section2 .slide .slide3, #section2 .slide .slide4,
+#section2 .slide .slide5{
+    position: absolute;
+}
+
+#section2 .slide .slide1{
+    left: 0;
+    z-index: 1;
+}
+
+#section2 .slide .slide2{
+    left: 194px;
+    z-index: 2;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+}
+
+#section2 .slide .slide3{
+    left: 388px;
+    z-index: 3;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+}
+
+#section2 .slide .slide4{
+    right: 194px;
+    z-index: 2;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+}
+
+#section2 .slide .slide5{
+    right: 0;
+    z-index: 1;
+}
+
+#section2 .slide .slide1 figure, #section2 .slide .slide2 figure,
+#section2 .slide .slide3 figure, #section2 .slide .slide4 figure,
+#section2 .slide .slide5 figure{
+    position: absolute;
+}
+
+#section2 .slide .darkeffect{
+    width: 364px;
+    height: 560px;
+}
+
+#section2 .slide .slide1 .darkeffect, #section2 .slide .slide5 .darkeffect{
+    background-color: #000000;
+    opacity: 0.4;
+}
+
+#section2 .slide .slide2 .darkeffect, #section2 .slide .slide4 .darkeffect{
+    background-color: #000000;
+    opacity: 0.2;
+}
+
+#section2 p{
+    text-align: center;
+    margin-top: 100px;
+}
+
+#section2 p span{
+    font-weight: 700;
+}
+
+#section3{
+    height: 760px;
+    padding-top: 50px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+#section3 .bgbox{
+    width: calc(1140px + calc(50% - 570px));
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(65, 105, 225, 0.5), rgba(204, 238, 255, 0.5));
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#section3 .videobox{
+    height: 300px;
+    background-color: #777777;
+}
+
+#section3 .row:first-of-type{
+    margin-bottom: calc(760px - calc(600px + 100px));
+}
+
+#section3 .row:first-of-type .subtitle{
+    text-align: center;
+}
+
+#section3 .row:first-of-type .subtitle h2{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#section3 .row:first-of-type .subtitle h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+#section3 .row:first-of-type .subtitle p span{
+    font-weight: 700;
+}
+
+#section3 .row:nth-of-type(2) .subtitle{
+    text-align: center;
+}
+
+#section3 .row:nth-of-type(2) .subtitle span{
+    font-weight: 700;
+}
+
+#section3 .subPageLink{
+    width: 200px;
+    height: 100px;
+    background-color: #ffdfdf;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+    font-family: 'Nanum';
+    font-size: 1.5rem;
+}
+
+#section3 .subPageLink p{
+    text-align: center;
+    margin-top: 14px;
+}
+
+#section4{
+    height: 760px;
+    padding-top: 10px;
+    background: linear-gradient(to bottom, rgba(76, 136, 0, 0.3), rgba(171, 193, 1, 0.3) 50%, rgba(6, 136, 0, 0.3))
+}
+
+#section4 .subtitle{
+    color: #ffffff;
+    font-weight: 700;
+}
+
+#section4 .subtitle h2{
+    font-size: 3rem;
+}
+
+#section4 .subtitle h3{
+    font-size: 1.5rem;
+}
+
+#section4 p{
+    text-align: end;
+}
+
+#section4 p span{
+    font-weight: 700;
+}
+
+#section4 .videobox{
+    height: 560px;
+    background-color: #777777;
+    margin-top: 50px;
+}
+
+.ending{
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Nanum';
+    font-size: 4rem;
+    margin-bottom: 408px;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #333333;
+    text-align: center;
+    color: #dfdfdf;
+    padding-top: 20px;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+footer ul li:not(:last-child)::after{
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #dfdfdf;
+    margin-left: 5px;
+    margin-right: 5px;
+}
