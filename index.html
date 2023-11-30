@@ -11,6 +11,9 @@
 <body>
     <!--header-->
     <header>
+        <button type="button" class="hambtn">
+            <i class="fa-solid fa-bars fa-4x"></i>
+        </button>
         <ul>
             <li>
                 <a href="#">
@@ -57,12 +60,14 @@
     <!--//header-->
     <!--main-->
     <main>
+        <div class="bgbox"></div>
+        <h2>이젠, 더 쉽게</h2>
         <div class="container">
-            <div class="col-12 mainbox">
-                <figure class="biglogo">
+            <div class="row align-items-center">
+                <figure class="col-4 col-md-3 offset-md-2 biglogo">
                     <img src="./image/icon02.png" alt="logo">
                 </figure>
-                <div class="titlebox">
+                <div class="col-6 offset-sm-1 titlebox">
                     <h1>PLim</h1>
                     <h2>성공지향형 플래너</h2>
                     <div class="btnbox">
@@ -70,11 +75,9 @@
                         <button type="button">다운로드</button>
                     </div>
                 </div>
-                <figure class="deco">
-                    <img src="./image/deco01.png" alt="deco1">
-                </figure>
             </div>
         </div>
+        <button type="button">지금 시작하기</button>
     </main>
     <!--//main-->
     <!--section1-->
@@ -82,20 +85,26 @@
         <div class="bgbox"></div>
         <div class="container">
             <div class="row">
-                <div class="col-8 subtitle">
+                <div class="col-12 col-md-8 subtitle">
                     <h2>ADVICE & CARE</h2>
                     <h3>이젠, 실천으로</h3>
                 </div>
             </div>
             <div class="row">
-                <p class="col-12">
+                <p class="col-12 d-none d-md-block">
                     생각만 하고 실천하지 못하시나요? 피드백 없이 똑같은 실수만 반복하시나요?<br>
                     이젠 PLim이 목표 설정, 실행, 피드백까지 다 도와줍니다<br>
                     <span>PLim의 3단계 케어 시스템</span>을 경험해보세요
                 </p>
             </div>
-            <div class="row justify-content-end">
-                <div class="col-10 videobox"></div>
+            <div class="row">
+                <div class="col-10 offset-md-2 offset-1 videobox"></div>
+            </div>
+            <div class="row">
+                <p class="col-12 d-block d-md-none">
+                    이젠 PLim이 목표 설정, 실행, 피드백까지 다 도와줍니다<br>
+                    <span>PLim의 3단계 케어 시스템</span>을 경험해보세요
+                </p>
             </div>
         </div>
         <div class="subPageLink">
@@ -114,7 +123,7 @@
     <section id="section2">
         <div class="container">
             <div class="row justify-content-end">
-                <div class="col-5 subtitle">
+                <div class="col-12 col-md-5 subtitle">
                     <h2>STYLING</h2>
                     <h3>이젠, 내 마음대로</h3>
                 </div>
@@ -166,10 +175,10 @@
     <section id="section3">
         <div class="bgbox"></div>
         <div class="container">
-            <div class="row justify-content-end">
-                <div class="col-7 videobox">
+            <div class="row">
+                <div class="col-10 col-md-7 order-last order-md-first offset-1 videobox">
                 </div>
-                <div class="col-4 align-self-center subtitle">
+                <div class="col-12 col-md-4 order-first order-md-last align-self-center subtitle">
                     <h2>only ONE</h2>
                     <h3>이젠, 하나로</h3>
                     <p>
@@ -181,13 +190,20 @@
                 </div>
             </div>
             <div class="row">
-                <p class="col-4 align-self-center subtitle">
+                <p class="col-4 d-none d-md-block align-self-center subtitle">
                     사용하는 방법은 간단합니다<br>
                     원하는 분야의 기능을 검색하세요.<br>
                     그리고 추가하세요.<br>
                     <span>쉽죠? 이게 다 입니다.</span>
                 </p>
-                <div class="col-7 videobox"></div>
+                <div class="col-10 col-md-7 offset-1 offset-md-0 videobox"></div>
+            </div>
+            <div class="row">
+                <p class="col-12 d-block d-md-none">
+                    쓸데없이 많은 앱들에 지치셨나요?<br>
+                    <span>이젠 PLim으로 다 해결하세요<br>
+                    100+의 추가기능 지원</span>
+                </p>
             </div>
         </div>
         <div class="subPageLink">
@@ -204,18 +220,25 @@
     <section id="section4">
         <div class="container">
             <div class="row">
-                <div class="col-4 subtitle">
+                <div class="col-12 col-md-4 subtitle">
                     <h2>with FRIENDS</h2>
                     <h3>이젠, 친구들과 함께</h3>
                 </div>
-                <p class="col-4 offset-md-4 align-self-center">
+                <p class="col-4 d-none d-md-block offset-md-4 align-self-center">
                     나와 비슷한 목표를 가진 친구들과<br>
                     함께 목표를 이뤄보세요<br>
                     <span>목표 공동체 기능 지원</span>
                 </p>
             </div>
             <div class="row">
-                <div class="col-10 offset-md-1 videobox"></div>
+                <div class="col-10 offset-1 videobox"></div>
+            </div>
+            <div class="row">
+                <p class="col-12 d-block d-md-none">
+                    나와 비슷한 목표를 가진 친구들과<br>
+                    함께 목표를 이뤄보세요<br>
+                    <span>목표 공동체 기능 지원</span>
+                </p>
             </div>
         </div>
     </section>

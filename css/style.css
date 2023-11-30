@@ -32,9 +32,13 @@ header{
     width: 100px;
     height: 400px;
     position: absolute;
-    top: 280px;
+    top: 280px;/* (padding-top)+(mainbg_height)x1/2 */
     left: 20px;
     color: #777777;
+}
+
+header .hambtn{
+    display: none;
 }
 
 header ul li a{
@@ -54,60 +58,64 @@ header ul li a figure{
 main{
     height: 960px;
     padding-top: 100px;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
 }
 
-main .mainbox{
+main>h2{
+    display: none;
+}
+
+main .bgbox{
+    width: 1190px;
     height: 760px;
-    padding: 0;
     background-image: url('../image/mainbg.png');
     background-repeat: no-repeat;
-    background-size: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-position: center center;
+    background-size: contain;
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 570px);
 }
 
-main .mainbox .biglogo{
-    width: 250px;
-    height: 250px;
-    position: relative;
-    left: 25%;
-    transform: translateX(-50%);
-    /*calc이용해서 바꾸자*/
-    /*그냥 로고 자체를 새로 만들자*/
+main .container{
+    height: 760px;
+}
+
+main .container .row{
+    height: 100%;
+}
+
+main .biglogo img{
     box-shadow: #888888 4px 4px 4px;
 }
 
-main .mainbox .titlebox{
-    position: relative;
-    right: 25%;
-    transform: translateX(50%);
+main .titlebox{
     text-align: center;
 }
 
-main .mainbox .titlebox h1{
+main .titlebox h1{
     font-size: 8rem;
     font-weight: 900;
     margin-bottom: 0;
 }
 
-main .mainbox .titlebox h2{
+main .titlebox h2{
     font-size: 2rem;
     font-weight: 400;
     margin-top: 0;
 }
 
-main .mainbox .titlebox .btnbox{
+main .titlebox .btnbox{
     width: 430px;
     height: 100px;
-    margin-top: 30px;
+    margin: 30px auto;
+    margin-bottom: 0;
     display: flex;
     justify-content: space-between;
     align-content: center;
 }
 
-main .mainbox .titlebox .btnbox button{
+main .titlebox .btnbox button{
     width: 200px;
     height: 100px;
     border: none;
@@ -117,20 +125,18 @@ main .mainbox .titlebox .btnbox button{
     font-weight: 600;
 }
 
-main .mainbox .titlebox .btnbox button:first-of-type{
+main .titlebox .btnbox button:first-of-type{
     background-color: #ff7f00;
     color: #ffffff;
 }
 
-main .mainbox .titlebox .btnbox button:nth-of-type(2){
+main .titlebox .btnbox button:nth-of-type(2){
     background-color: #777777;
     color: #d9d9d9;
 }
 
-main .mainbox .deco{
-    position: absolute;
-    top: 100px;
-    right: -51px;
+main>button{
+    display: none;
 }
 
 #section1{
@@ -171,17 +177,26 @@ main .mainbox .deco{
     line-height: 200%;
 }
 
-#section1>p{
+#section1 .row:nth-of-type(2) p{
     font-size: 1rem;
 }
 
-#section1 p span{
+#section1 .row:nth-of-type(2) p span{
     font-weight: 700;
 }
 
 #section1 .videobox{
     height: 500px;
     background-color: #777777;
+}
+
+#section1 .row:nth-of-type(4) p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#section1 .row:nth-of-type(4) p span{
+    font-weight: 700;
 }
 
 #section1 .subPageLink{
@@ -362,7 +377,7 @@ main .mainbox .deco{
     height: 100px;
     background-color: #ffdfdf;
     position: absolute;
-    top: 100px;
+    bottom: 100px;
     right: 0;
     display: flex;
     justify-content: center;
@@ -443,4 +458,374 @@ footer ul li:not(:last-child)::after{
     background-color: #dfdfdf;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    html{
+        font-size: 12px;
+    }
+
+    header{
+        width: 75px;
+        height: 300px;
+        top: 270px;
+        left: 10px;
+    }
+
+    main{
+        height: 840px;
+    }
+
+    main .bgbox{
+        width: 990px;
+        height: 640px;
+        left: calc(50% - 480px);
+    }
+
+    main .container{
+        height: 640px;
+    }
+
+    main .container .titlebox .btnbox{
+        width: 330px;
+        height: 75px;
+    }
+
+    main .container .titlebox .btnbox button{
+        width: 150px;
+        height: 75px;
+    }
+
+    #section1{
+        height: 640px;
+    }
+
+    #section1 .bgbox{
+        width: 100%;
+        height: 100%;
+    }
+
+    #section1 .container .videobox{
+        height: 450px;
+    }
+
+    #section1 .subPageLink{
+        width: 225px;
+        height: 75px;
+    }
+
+    #section2{
+        height: 740px;
+    }
+
+    #section2 p{
+        margin-top: 50px;
+    }
+
+    #section3{
+        height: 640px;
+        padding-top: 20px;
+    }
+
+    #section3 .bgbox{
+        width: 100%;
+        height: 100%;
+    }
+
+    #section3 .container .videobox{
+        height: 270px;
+    }
+
+    #section3 .row:first-of-type .subtitle h3{
+        margin-bottom: 40px;
+    }
+
+    #section3 .subPageLink{
+        width: 150px;
+        height: 75px;
+    }
+
+    #section4{
+        height: 640px;
+    }
+
+    #section4 .videobox{
+        height: 500px;
+        margin-top: 40px;
+    }
+
+}
+
+@media screen and (max-width:992px) {
+    html{
+        font-size: 10px;
+    }
+
+    header{
+        width: 63px;
+        height: 250px;
+        top: 225px;
+        left: 10px;
+    }
+
+    main{
+        height: 680px;
+        margin-bottom: 150px;
+    }
+
+    main .bgbox{
+        width: 750px;
+        height: 480px;
+        left: calc(50% - 360px);
+    }
+
+    main .container{
+        height: 480px;
+    }
+
+    main .container .titlebox .btnbox{
+        width: 260px;
+        height: 60px;
+    }
+
+    main .container .titlebox .btnbox button{
+        width: 120px;
+        height: 60px;
+    }
+
+    #section1{
+        height: 480px;
+    }
+
+    #section1 .container .videobox{
+        height: 330px;
+    }
+
+    #section1 .subPageLink{
+        width: 180px;
+        height: 60px;
+    }
+
+    #section2{
+        height: 580px;
+    }
+
+    #section2 .slide{
+        display: none;/*임시용*/
+    }
+
+    #section2 p{
+        margin-top: 30px;
+    }
+
+    #section3{
+        height: 480px;
+        padding-top: 15px;
+    }
+
+    #section3 .container .videobox{
+        height: 220px;
+    }
+
+    #section3 .row:first-of-type{
+        margin-bottom: calc(480px - calc(440px + 30px));
+    }
+
+    #section3 .row:first-of-type .subtitle h3{
+        margin-bottom: 30px;
+    }
+
+    #section3 .subPageLink{
+        width: 120px;
+        height: 60px;
+    }
+
+    #section4{
+        height: 480px;
+    }
+
+    #section4 .videobox{
+        height: 375px;
+        margin-top: 20px;
+    }
+
+    .ending{
+        margin-bottom: 306px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header{
+        width: 100%;
+        height: 100px;
+        position: static;
+        padding-top: 10px;
+        border-bottom: 2px solid #dfdfdf;
+    }
+
+    header .hambtn{
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin: 10px;
+        margin-top: 0;
+        border: none;
+        background: none;
+        color: #333333;
+    }
+
+    header ul{
+        display: none;
+    }
+
+    main{
+        height: calc(90vh - 100px);
+        min-height: 560px;
+        padding-top: 42px;
+    }
+
+    main>h2{
+        display: block;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 30px;
+        font-family: 'Nanum';
+        font-size: 4rem;
+    }
+
+    main .bgbox{
+        width: 575px;
+        height: 360px;
+        top: 220px;
+        left: 0;
+        background-image: url('../image/mainbg_SMsize.png');
+    }
+
+    main .container{
+        height: 360px;
+    }
+
+    main .container .titlebox .btnbox{
+        display: none;
+    }
+
+    main>button{
+        display: block;
+        width: 150px;
+        height: 50px;
+        background-color: #ff7f00;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 30px auto;
+        margin-bottom: 0;
+    }
+
+    #section1{
+        height: 90vh;
+        min-height: 480px;
+        margin-bottom: 10vh;
+    }
+
+    #section1 .container .videobox{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: calc(90vh - 200px);
+        min-height: 330px;
+    }
+
+    #section1 .subPageLink{
+        display: none;
+    }
+
+    #section2{
+        height: 90vh;
+        min-height: 480px;
+        margin-bottom: 10vh;
+    }
+
+    #section2 p{
+        font-size: 1.5rem;
+    }
+
+    #section3{
+        height: 90vh;
+        min-height: 480px;
+        margin-bottom: 10vh;
+    }
+
+    #section3 .container .videobox{
+        height: calc(45vh - 120px);
+        min-height: 140px;
+    }
+
+    #section3 .subtitle p{
+        display: none;
+    }
+
+    #section3 .row:nth-of-type(3) p{
+        margin-top: 10px;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #section3 .row:nth-of-type(3) p span{
+        font-weight: 700;
+    }
+
+    #section3 .subPageLink{
+        display: none;
+    }
+
+    #section4{
+        height: 90vh;
+        min-height: 480px;
+        margin-bottom: 10vh;
+    }
+
+    #section4 .container .videobox{
+        height: calc(90vh - 200px);
+        min-height: 280px;
+    }
+
+    #section4 .container .row:nth-of-type(3) p{
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    main .bgbox{
+        left: calc(100% - 576px);
+    }
+
+    main .container .titlebox h1{
+        font-size: 6rem;
+    }
+
+    main .container .titlebox h2{
+        font-size: 1.5rem;
+    }
+
+    #section1 .container .subtitle h2{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    main .container .titlebox h1{
+        font-size: 4rem;
+    }
+
+    main .container .titlebox h2{
+        font-size: 1rem;
+    }
+
+    #section1 .container .subtitle h2{
+        font-size: 2rem;
+    }
 }
