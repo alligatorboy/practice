@@ -6,14 +6,27 @@
     <title>PLim</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <script src="./script/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/b210020bd1.js" crossorigin="anonymous"></script>
+    <script src="./script/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <!--header-->
     <header>
-        <button type="button" class="hambtn">
-            <i class="fa-solid fa-bars fa-4x"></i>
-        </button>
+        <div class="hambtnbox">
+            <button type="button" class="hambtn" onclick="menuOpen()">
+                <i class="fa-solid fa-bars fa-4x"></i>
+            </button>
+        </div>
+        <div class="xbtnbox">
+            <button type="button" class="xbtn" onclick="menuClose()">
+                <i class="fa-solid fa-xmark fa-4x"></i>
+            </button>
+        </div>
+    </header>
+    <!--//header-->
+    <!--nav-->
+    <nav>
         <ul>
             <li>
                 <a href="#">
@@ -56,8 +69,8 @@
                 </a>
             </li>
         </ul>
-    </header>
-    <!--//header-->
+    </nav>
+    <!--//nav-->
     <!--main-->
     <main>
         <div class="bgbox"></div>
@@ -280,5 +293,8 @@
         </p>
     </footer>
     <!--//footer-->
+    <!--script-->
+    <script src="./script/script01.js"></script>
+    <!--//script-->
 </body>
 </html>
